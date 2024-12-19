@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Botões</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .button {
+            width: 200px;
+            height: 60px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button1 {
+            background-color: #4CAF50; /* Cor original */
+        }
+
+        .button2 {
+            background-color: #2196F3; /* Cor original */
+        }
+
+        .button3 {
+            background-color: #f44336; /* Cor original */
+        }
+    </style>
+</head>
+<body>
+
+<div class="button-container">
+    <button class="button button1" onclick="changeColor(this)">Botão 1</button>
+    <button class="button button2" onclick="changeColor(this)">Botão 2</button>
+    <button class="button button3" onclick="changeColor(this)">Botão 3</button>
+</div>
+
+<script>
+    function changeColor(button) {
+        // Altera a cor de fundo ao clicar
+        if (button.style.backgroundColor === 'gray') {
+            button.style.backgroundColor = ''; // Reseta para a cor original
+        } else {
+            button.style.backgroundColor = 'gray'; // Altera para cinza
+        }
+    }
+</script>
+
+</body>
+</html>
